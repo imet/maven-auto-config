@@ -1,0 +1,16 @@
+
+#if($!live)
+	
+#elseif($!dev)
+	
+#elseif($!qa)
+	
+#end
+
+#if($!env=='live')
+
+#elseif($!env=='dev')
+	
+#elseif($!env=='qa')
+	
+#end

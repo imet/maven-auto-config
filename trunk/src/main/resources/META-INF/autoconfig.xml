@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autoconfig>
+	<remote-resources>
+	    <global-resouce url="http://localhost:8080/autoconfig?project=abc&amp;env=dev" file="project.properties" />
+		<resource url="http://localhost:8080/autoconfig?project=abc&amp;env=dev" file="project.properties" />
+	</remote-resources>
+
+	<template-resources>
+		<resource template="spring-config.xml.vm" target="spring-config.xml" />
+		<resource template="spring/spring-config-struts.xml.vm" target="spring/spring-config-struts.xml" />
+	</template-resources>
+</autoconfig>
