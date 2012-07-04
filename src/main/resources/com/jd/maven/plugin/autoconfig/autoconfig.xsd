@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://www.360buy.com/autoconfig"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.360buy.com/autoconfig">
+
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+	<xsd:complexType name="global-resouce-Type">
+		<xsd:attribute name="url" type="xsd:string" use="required" />
+		<xsd:attribute name="file" type="xsd:string" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="locale-resouce-Type">
+		<xsd:attribute name="url" type="xsd:string" use="required" />
+		<xsd:attribute name="file" type="xsd:string" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="template-resouce-Type">
+		<xsd:attribute name="template" type="xsd:string" use="required" />
+		<xsd:attribute name="target" type="xsd:string" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="tempateResourcesType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="resouce" type="template-resouce-Type" /> 
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="remoteResourcesType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="global-resouce" type="global-resouce-Type" />
+			<xsd:element name="resource" type="locale-resouce-Type" />
+		</xsd:choice>
+	</xsd:complexType>
+ 
+	<xsd:element name="autoconfig">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="remote-resources" type="remoteResourceType" />
+				<xsd:element name="template-resources" type="tempateResourcesType" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</schema>
