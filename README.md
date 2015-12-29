@@ -1,6 +1,8 @@
 # maven-auto-config
 
-Automatically exported from code.google.com/p/maven-auto-config （自动从 google code 上导出的，仅作备份使用 )
+Note:
+
+Automatically exported from `code.google.com/p/maven-auto-config` （自动从 google code 上导出的，仅作备份使用 )
 
 If you find this meet the legal issue, please contact me to delete this repository.  (如果你认为这个有法律问题，请联系我，我将删除这个 repository.)
 
